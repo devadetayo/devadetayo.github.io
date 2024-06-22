@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <title>Adeniyi Adetayo - Full-stack Web developer, Graphic Designer & Writer</title>
+    <link rel="stylesheet" href="assets/velocity/velocity.css">
+    <link rel="stylesheet" href="assets/velocity/main.css">
+    <link rel="icon" href="assets/favico/favico.png" type="image/png">
+    <link rel="shortcut icon" href="resources/favico/favico.png" type="image/png">
+    <!--scripts-->
+    <script src="assets/js/jquery-3.7.1.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/prism.js"></script>
+</head>
+
+<body class="md:font-s-md text-grey-600 dark:text-grey-100 bg-white dark:bg-slate-800 line-h-md" style="background-image: url('assets/images/rays.png'); background-repeat: no-repeat; background-size: contain;">
+
+    <ul class="d-none h-full gap-8 justify-content-center align-items-center sm:d-flex sm:w-three-quarter sm:flex-column sm:box-shadow-lg sm:gap-0 sm:position-fixed sm:h-full sm:position-left-0 sm:position-top-0 sm:bg-white sm:dark:bg-slate-800 sm:justify-content-start sm:pt-64 sm:pb-16 side-nav transition-duration-300 transition-property-transform transition-ease-in-out sm:z-10" style="transform: translateX(-24rem);">
+        <li class="d-flex w-full h-min"><a href="#home" class="no-decoration-text px-12 py-4 font-w-medium hover:color-blue-500 sm:w-full sm:py-12 sm:px-16 sm:font-w-semibold">Documentation</a></li>
+        <li class="d-flex w-full h-min"><a href="#project" class="no-decoration-text px-12 py-4 font-w-medium hover:color-blue-500 sm:w-full sm:py-12 sm:px-16 sm:font-w-semibold">Examples</a></li>
+        <li class="d-flex w-full h-min"><a href="http://codewithace.free.nf/blog" class="no-decoration-text px-12 py-4 font-w-medium hover:color-blue-500 sm:w-full sm:py-12 sm:px-16 sm:font-w-semibold">Blog</a></li>
+        <li class="d-flex w-full h-min"><a href="swiftcss.github.io" class="w-max no-decoration-text px-12 py-4 font-w-medium hover:color-blue-500 sm:w-full sm:py-12 sm:px-16 sm:font-w-semibold">Sponsor</a></li>
+        <div class="d-flex justify-content-center align-items-center border-solid border-wl-2 border-w-0 h-min border-grey-200 gap-8 pl-8 sm:border-none sm:flex-column sm:w-full sm:justify-content-start sm:position-absolute sm:position-bottom-0 sm:pl-0 sm:pb-16">
+            <li class="w-full h-full light-mode d-none dark:d-flex">
+                <a href="#contact" class="d-flex justify-content-center align-items-center h-full no-decoration-text border-round-full p-8 hover:color-blue-500 sm:w-full sm:py-8 sm:px-16 sm:font-s-xl sm:font-w-semibold sm:gap-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-22 h-22"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></svg>
+                    <span class="d-none sm:d-flex h-full w-full">light Mode</span>
+                </a>
+            </li>
+
+            <li class="d-flex w-full h-full dark-mode .dark:d-none">
+                <a class="d-flex justify-content-center align-items-center h-full no-decoration-text border-round-full p-8 hover:color-blue-500 sm:py-8 sm:px-16 sm:font-s-xl sm:font-w-semibold sm:gap-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.34A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106,106,0,0,0,96,56,104.11,104.11,0,0,0,200,160a106,106,0,0,0,14.92-1.06A89,89,0,0,1,188.9,190.34Z"/></svg>
+                    <span class="d-none sm:d-flex h-full w-full">Dark-mode</span>
+                </a>
+            </li>
+
+            <li class="d-flex w-full h-full">
+                <a href="https://github.com/developeradetayo" class="d-flex justify-content-center align-items-center h-full no-decoration-text border-round-full p-8 hover:color-blue-500 sm:py-8 sm:px-16 sm:font-s-xl sm:font-w-semibold sm:gap-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,104v8a56.06,56.06,0,0,1-48.44,55.47A39.8,39.8,0,0,1,176,192v40a8,8,0,0,1-8,8H104a8,8,0,0,1-8-8V216H72a40,40,0,0,1-40-40A24,24,0,0,0,8,152a8,8,0,0,1,0-16,40,40,0,0,1,40,40,24,24,0,0,0,24,24H96v-8a39.8,39.8,0,0,1,8.44-24.53A56.06,56.06,0,0,1,56,112v-8a58.14,58.14,0,0,1,7.69-28.32A59.78,59.78,0,0,1,69.07,28,8,8,0,0,1,76,24a59.75,59.75,0,0,1,48,24h24a59.75,59.75,0,0,1,48-24,8,8,0,0,1,6.93,4,59.74,59.74,0,0,1,5.37,47.68A58,58,0,0,1,216,104Z"/></svg>
+                    <span class="d-none sm:d-flex h-full w-full">Github</span>
+                </a>
+            </li>
+        </div>
+    </ul>
+
+    <main class="w-full text-pretty position-relative">
+
+        <nav class="d-flex w-full justify-content-between align-items-center position-fixed h-auto py-16 px-24 sm:px-16 sm:py-12 md:py-20 md:py-12 bg-transparent z-10">
+            <a href="" class="d-flex justify-content-center align-items-center gap-12 font-s-lg no-decoration-text h-min font-w-semibold font-s-md color-black dark:color-white hover:font-w-semibold sm:z-20">
+                <img src="assets/images/logo.png" class="d-light max-w-fit h-22">
+                <img src="assets/images/logo-dark.png" class="d-dark d-none max-w-fit h-22">
+            </a>
+    
+            <ul class="d-flex h-full gap-8 justify-content-center align-items-center sm:d-none">
+                <li class="d-flex w-full h-min"><a href="#home" class="no-decoration-text px-12 py-4 font-w-medium hover:color-blue-500 sm:w-full sm:py-12 sm:px-16 sm:font-w-semibold">Documentation</a></li>
+                <li class="d-flex w-full h-min"><a href="#project" class="no-decoration-text px-12 py-4 font-w-medium hover:color-blue-500 sm:w-full sm:py-12 sm:px-16 sm:font-w-semibold">Examples</a></li>
+                <li class="d-flex w-full h-min"><a href="http://codewithace.free.nf/blog" class="no-decoration-text px-12 py-4 font-w-medium hover:color-blue-500 sm:w-full sm:py-12 sm:px-16 sm:font-w-semibold">Blog</a></li>
+                <li class="d-flex w-full h-min"><a href="swiftcss.github.io" class="w-max no-decoration-text px-12 py-4 font-w-medium hover:color-blue-500 sm:w-full sm:py-12 sm:px-16 sm:font-w-semibold">Sponsor</a></li>
+                <div class="d-flex justify-content-center align-items-center border-solid border-wl-2 border-w-0 h-min border-grey-200 gap-8 pl-8 sm:border-none sm:flex-column sm:w-full sm:justify-content-start sm:position-absolute sm:position-bottom-0 sm:pl-0 sm:pb-16">
+                    <li class="w-full h-full light-mode d-none dark:d-flex">
+                        <a href="#contact" class="d-flex justify-content-center align-items-center h-full no-decoration-text border-round-full p-8 hover:color-blue-500 sm:w-full sm:py-8 sm:px-16 sm:font-s-xl sm:font-w-semibold sm:gap-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" class="w-22 h-22"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></svg>
+                            <span class="d-none sm:d-flex h-full w-full">light Mode</span>
+                        </a>
+                    </li>
+    
+                    <li class="d-flex w-full h-full dark-mode .dark:d-none">
+                        <a class="d-flex justify-content-center align-items-center h-full no-decoration-text border-round-full p-8 hover:color-blue-500 sm:py-8 sm:px-16 sm:font-s-xl sm:font-w-semibold sm:gap-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.34A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106,106,0,0,0,96,56,104.11,104.11,0,0,0,200,160a106,106,0,0,0,14.92-1.06A89,89,0,0,1,188.9,190.34Z"/></svg>
+                            <span class="d-none sm:d-flex h-full w-full">Dark-mode</span>
+                        </a>
+                    </li>
+    
+                    <li class="d-flex w-full h-full">
+                        <a href="https://github.com/developeradetayo" class="d-flex justify-content-center align-items-center h-full no-decoration-text border-round-full p-8 hover:color-blue-500 sm:py-8 sm:px-16 sm:font-s-xl sm:font-w-semibold sm:gap-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,104v8a56.06,56.06,0,0,1-48.44,55.47A39.8,39.8,0,0,1,176,192v40a8,8,0,0,1-8,8H104a8,8,0,0,1-8-8V216H72a40,40,0,0,1-40-40A24,24,0,0,0,8,152a8,8,0,0,1,0-16,40,40,0,0,1,40,40,24,24,0,0,0,24,24H96v-8a39.8,39.8,0,0,1,8.44-24.53A56.06,56.06,0,0,1,56,112v-8a58.14,58.14,0,0,1,7.69-28.32A59.78,59.78,0,0,1,69.07,28,8,8,0,0,1,76,24a59.75,59.75,0,0,1,48,24h24a59.75,59.75,0,0,1,48-24,8,8,0,0,1,6.93,4,59.74,59.74,0,0,1,5.37,47.68A58,58,0,0,1,216,104Z"/></svg>
+                            <span class="d-none sm:d-flex h-full w-full">Github</span>
+                        </a>
+                    </li>
+                </div>
+            </ul>
+    
+            <ul class="sm:d-flex h-full gap-8 d-none lg:d-none">
+                <li class="w-full h-full" id="showNav">
+                    <a class="d-flex justify-content-center align-items-center h-full no-decoration-text border-round-full p-8 hover:color-blue-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M228,128a12,12,0,0,1-12,12H40a12,12,0,0,1,0-24H216A12,12,0,0,1,228,128ZM40,76H216a12,12,0,0,0,0-24H40a12,12,0,0,0,0,24ZM216,180H40a12,12,0,0,0,0,24H216a12,12,0,0,0,0-24Z"/></svg>
+                    </a>
+                </li>
+    
+                <li class="w-full h-full d-none" id="closeNav">
+                    <a class="d-flex justify-content-center align-items-center h-full no-decoration-text border-round-full p-8 hover:color-blue-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="d-flex min-vh-80 w-full align-items-center justify-content-center px-16 pt-52 md:px-16 lg:px-16 sm:px-16 md:min-vh-60 lg:min-vh-80 sm:min-vh-80" id="about">
+            <div class="d-flex flex-column w-four-fifth h-full align-items-center justify-content-center center-text lg:w-nine-quarter md:nine-tenth sm:w-full">
+                <h1 class="font-s-2xl font-w-black mb-16 color-black dark:color-white sm:font-s-2md">Build Faster, Design Better with The Ultimate Utility-First CSS Framework.</h1>
+                <p class="font-w-medium mb-20 font-s-md sm:font-s-md">Velocity CSS is your go-to solution for rapid, responsive, and modern web design. Leverage a powerful set of utility classes to streamline your development process and bring your creative visions to life with ease.</p>
+                <div class="d-flex gap-20 w-full justify-content-center align-items-center">
+                    <a href="" class="px-24 h-24 d-flex justify-content-center align-items-center bg-blue-500 hover:bg-blue-600 color-white no-decoration-text border-round-lg hover:font-w-normal hover:color-white">Get Started</a>
+                    <a href="" class="px-24 h-24 d-flex justify-content-center align-items-center bg-indigo-500 hover:bg-indigo-600 color-white no-decoration-text border-round-lg hover:font-w-normal hover:color-white">Download</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="d-flex flex-column w-full align-items-center justify-content-center mb-28 px-60 py-20 lg:px-16 md:px-16 sm:px-0">
+            <div class="d-flex w-full align-items-center justify-content-center sm:flex-column-reverse sm:gap-20">
+                <div class="d-flex flex-column w-two-fifth p-20 sm:py-12 sm:px-16 align-items-center justify-content-center lg:w-hf md:w-hf sm:w-full">
+                    <div class="d-flex flex-column align-items-start justify-content-start p-28 sm:p-24 bg-white dark:bg-slate-700 box-shadow-lg gap-20 border-round-xl hover:scale-105 transition-duration-300 transition-ease-in-out transition-property-all">
+                        <div class="d-flex w-full sm:w-full h-max">
+                            <img src="assets/images/frontend.png" class="w-28 h-28 object-fit-cover">
+                        </div>
+                        <div class="d-flex w-full sm:w-full flex-column h-min gap-12">
+                            <h4 class="font-s-lg font-w-bold color-black dark:color-white">Lorem Ipsum</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel incidunt earum laborum odio deserunt? Accusantium nam dicta tempora voluptates sint molestias quam animi minima corporis esse dignissimos, consequuntur blanditiis adipisci?</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column w-full h-auto my-20 gap-12">
+                        <h2 class="font-s-xl font-w-bold">Buttons</h2>
+                        <div class="d-flex gap-12 flex-wrap">
+                            <button type="button" class="w-fit border-none p-20 h-24 d-flex align-items-center justify-content-center bg-blue-500 color-white border-round-lg hover:bg-blue-600 transition-duration-300 transition-ease-in-out transition-property-all">Blue Button</button>
+                            <button type="button" class="w-fit border-none p-20 h-24 d-flex align-items-center justify-content-center bg-green-600 color-white border-round-xl hover:bg-green-700 transition-duration-300 transition-ease-in-out transition-property-all">Green Button</button>
+                            <button type="button" class="w-fit border-none p-20 h-24 d-flex align-items-center justify-content-center bg-gradient-r from-blue-500 to-rose-500 color-white border-round-lg hover:bg-gradient-tr transition-duration-300 transition-ease-in-out transition-property-all">Gradient Button</button>
+                            <button type="button" class="w-fit border-none p-20 h-24 d-flex align-items-center justify-content-center bg-indigo-500 color-white border-round-pill hover:bg-gradient-r hover:from-indigo-500 hover:to-rose-500 transition-duration-300 transition-ease-in-out transition-property-all">Indigo Button</button>
+                            <button type="button" class="w-fit border-none p-20 h-24 d-flex align-items-center justify-content-center bg-red-500 color-white border-round-md hover:bg-red-600 transition-duration-300 transition-ease-in-out transition-property-all">Red Button</button>
+                            <button type="button" class="w-fit border-none p-20 h-24 d-flex align-items-center justify-content-center bg-sky-500 color-white border-round-md hover:bg-sky-600 transition-duration-300 transition-ease-in-out transition-property-all">Sky-blue Button</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="d-flex w-three-fifth gap-12 p-12 lg:w-hf md:w-hf sm:w-full sm:px-0">
+                    <pre class="language-html border-round-2lg bg-slate-800 w-full d-flex overflow-hidden border-solid border-w-2 border-slate-100 dark:border-slate-700 flex-column p-0 max-h-68 sm:max-h-56" tabindex="0">
+                        <div class="d-flex w-full align-items-center p-16 gap-12 border-solid border-wb-2 border-w-0 border-slate-100 dark:border-grey-700"><span class="w-12 h-12 border-round-full bg-red-500"></span><span class="w-12 h-12 border-round-full bg-yellow-500"></span><span class="w-12 h-12 border-round-full bg-green-500"></span></div>
+                        <code class="language-html p-32 sm:p-16 text-white overflow-auto horizontal-scrollbar" tabindex="0">&lt;div class="d-flex flex-column w-hf p-20 sm:p-12 align-items-center justify-content-center sm:w-full"&gt;
+    &lt;div class="d-flex flex-column align-items-start justify-content-start p-28 sm:p-24 bg-white dark:bg-slate-700 box-shadow-lg gap-20 border-round-xl hover:scale-105 transition-duration-300 transition-ease-in-out transition-property-all"&gt;
+    &lt;div class="d-flex w-full sm:w-full h-max"&gt;
+        &lt;img src="../path/to/image.jpg" class="w-28 h-28 object-fit-cover"&gt;
+    &lt;/div&gt;
+    &lt;div class="d-flex w-full sm:w-full flex-column h-min gap-12"&gt;
+        &lt;h4 class="font-s-lg font-w-bold color-black dark:color-white"&gt;Lorem Ipsum&lt;/h4&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel incidunt earum laborum odio deserunt? Accusantium nam dicta tempora voluptates sint molestias quam animi minima corporis esse dignissimos, consequuntur blanditiis adipisci?&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+    &lt;div class="d-flex flex-column w-full h-auto my-10 gap-12"&gt;
+        &lt;h2 class="font-s-xl font-w-bold"&gt;Buttons&lt;/h2&gt;
+        &lt;div class="d-flex gap-12 flex-wrap"&gt;
+            &lt;button type="button" class="w-fit border-none p-20 h-24 d-flex align-items-center justify-content-center bg-blue-500 color-white border-round-lg hover:bg-blue-600 transition-duration-300 transition-ease-in-out transition-property-all"&gt;Blue Button&lt;/button&gt;
+            &lt;button type="button" class="w-fit border-none p-20 h-24 d-flex align-items-center justify-content-center bg-green-600 color-white border-round-xl hover:bg-green-700 transition-duration-300 transition-ease-in-out transition-property-all"&gt;Green Button&lt;/button&gt;
+            &lt;button type="button" class="w-fit border-none p-20 h-24 d-flex align-items-center justify-content-center bg-gradient-r from-blue-500 to-rose-500 color-white border-round-lg hover:bg-gradient-tr transition-duration-300 transition-ease-in-out transition-property-all"&gt;Gradient Button&lt;/button&gt;
+            &lt;button type="button" class="w-fit border-none p-20 h-24 d-flex align-items-center justify-content-center bg-indigo-500 color-white border-round-pill hover:bg-gradient-r hover:from-indigo-500 hover:to-rose-500 transition-duration-300 transition-ease-in-out transition-property-all"&gt;Indigo Button&lt;/button&gt;
+            &lt;button type="button" class="w-fit border-none p-20 h-24 d-flex align-items-center justify-content-center bg-red-500 color-white border-round-md hover:bg-red-600 transition-duration-300 transition-ease-in-out transition-property-all"&gt;Red Button&lt;/button&gt;
+            &lt;button type="button" class="w-fit border-none p-20 h-24 d-flex align-items-center justify-content-center bg-sky-500 color-white border-round-md hover:bg-sky-600 transition-duration-300 transition-ease-in-out transition-property-all"&gt;Sky-blue Button&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                    </pre>
+                </div>
+            </div>
+        </section>
+
+        <section class="d-flex flex-column w-full align-items-center justify-content-center px-68 py-20 lg:px-16 md:px-16 sm:px-16 sm:flex-column my-28 gap-20">
+            <div class="d-flex flex-column w-full align-items-center center-text mb-24 gap-8">
+                <h4 class="font-s-xxl font-w-bold text-black dark:text-white">Relatively Speedy</h4>
+                <p>Why Choose Velocity CSS?</p>
+            </div>
+            <div class="d-grid w-full grtpcols-3 md:grtpcols-2 sm:grtpcols-1 gap-20 pl-8 sm:pl-0">
+                <div class="d-flex flex-column align-items-start justify-content-start p-28 sm:p-24 bg-white dark:bg-slate-700 box-shadow-lg gap-20 border-round-xl hover:scale-105 transition-duration-300 transition-ease-in-out transition-property-all w-full">
+                    <div class="d-flex w-full">
+                        <img src="assets/images/speedy.png" class="w-28 object-fit-fill">
+                    </div>
+                    <div class="d-flex flex-column h-min gap-12 w-full">
+                        <h4 class="font-s-lg font-w-bold color-black dark:color-white">Speed Up Development</h4>
+                        <p>Spend less time writing custom CSS and more time building features. With Velocity CSS, you can quickly prototype and iterate on your designs.</p>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column align-items-start justify-content-start p-28 sm:p-24 bg-white dark:bg-slate-700 box-shadow-lg gap-20 border-round-xl hover:scale-105 transition-duration-300 transition-ease-in-out transition-property-all w-full">
+                    <div class="d-flex h-fit w-full">
+                        <img src="assets/images/customizable.png" class="w-28 h-28 object-fit-fill">
+                    </div>
+                    <div class="d-flex flex-column h-min gap-12 w-full">
+                        <h4 class="font-s-lg font-w-bold color-black dark:color-white">Highly Customizable</h4>
+                        <p>Easily customize and extend our utility classes to fit your project's unique needs without the hassle of writing repetitive CSS.</p>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column align-items-start justify-content-start p-28 sm:p-24 bg-white dark:bg-slate-700 box-shadow-lg gap-20 border-round-xl hover:scale-105 transition-duration-300 transition-ease-in-out transition-property-all w-full">
+                    <div class="d-flex h-fit w-full">
+                        <img src="assets/images/responsive.png" class="w-28 h-28 object-fit-fill">
+                    </div>
+                    <div class="d-flex flex-column h-min gap-12 w-full">
+                        <h4 class="font-s-lg font-w-bold color-black dark:color-white">Responsive Design</h4>
+                        <p>Create responsive layouts effortlessly with our pre-defined utility classes that adapt seamlessly across different screen sizes.</p>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column align-items-start justify-content-start p-28 sm:p-24 bg-white dark:bg-slate-700 box-shadow-lg gap-20 border-round-xl hover:scale-105 transition-duration-300 transition-ease-in-out transition-property-all w-full">
+                    <div class="d-flex h-fit w-full">
+                        <img src="assets/images/consitent.png" class="w-28 h-28 object-fit-fill">
+                    </div>
+                    <div class="d-flex flex-column h-min gap-12 w-full">
+                        <h4 class="font-s-lg font-w-bold color-black dark:color-white">Consistent and Predictable</h4>
+                        <p>Achieve consistent styling across your project with a set of well-defined utility classes, reducing the risk of unexpected design issues.</p>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column align-items-start justify-content-start p-28 sm:p-24 bg-white dark:bg-slate-700 box-shadow-lg gap-20 border-round-xl hover:scale-105 transition-duration-300 transition-ease-in-out transition-property-all w-full">
+                    <div class="d-flex h-fit w-full">
+                        <img src="assets/images/lighweight.png" class="w-28 h-28 object-fit-fill">
+                    </div>
+                    <div class="d-flex flex-column h-min gap-12 w-full">
+                        <h4 class="font-s-lg font-w-bold color-black dark:color-white">Lightweight</h4>
+                        <p>Velocity CSS is optimized for performance, ensuring fast load times and minimal impact on your site's speed.</p>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column align-items-start justify-content-start p-28 sm:p-24 bg-white dark:bg-slate-700 box-shadow-lg gap-20 border-round-xl hover:scale-105 transition-duration-300 transition-ease-in-out transition-property-all w-full">
+                    <div class="d-flex h-fit w-full">
+                        <img src="assets/images/community.png" class="w-28 h-28 object-fit-fill">
+                    </div>
+                    <div class="d-flex flex-column h-min gap-12 w-full">
+                        <h4 class="font-s-lg font-w-bold color-black dark:color-white">Community-Driven</h4>
+                        <p>Benefit from a vibrant community of developers who contribute to the framework, ensuring it evolves with the latest best practices and trends.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="d-flex flex-column w-full align-items-center justify-content-center px-68 py-20 lg:px-16 md:px-16 sm:px-16 sm:flex-column my-28 gap-20">
+            <div class="d-flex flex-column w-full align-items-center center-text mb-24 gap-8">
+                <h4 class="font-s-xxl font-w-bold text-black dark:text-white">Key Features</h4>
+                <p>What makes us special</p>
+            </div>
+            <div class="d-flex flex-column w-full gap-20 pl-8 sm:pl-0">
+                <div class="d-flex align-items-start justify-content-start gap-20 w-full sm:flex-column sm:flex-row-reverse py-16 mb-16">
+                    <div class="d-flex flex-column w-hf sm:flex-column sm:w-full">
+                        <div class="d-flex w-full mb-16">
+                            <img src="assets/images/comprehensive.png" class="w-28 h-28 object-fit-fill">
+                        </div>
+                        <div class="d-flex flex-column h-min gap-12 w-full">
+                            <h4 class="font-s-lg font-w-bold color-black dark:color-white">Comprehensive Utility Classes</h4>
+                            <p>Velocity CSS offers a wide range of utility classes for layout, spacing, typography, and colors. Build complex designs efficiently with consistent class names, eliminating the need for custom CSS.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex w-hf justify-content-center align-items-center sm:w-full">
+                        <img src="assets/svgs/utility.svg" class="h-40">
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row-reverse align-items-start justify-content-start gap-20 w-full sm:flex-column py-16 my-16">
+                    <div class="d-flex flex-column w-hf sm:flex-column sm:w-full">
+                        <div class="d-flex w-full mb-16">
+                            <img src="assets/images/intuitive.png" class="w-28 h-28 object-fit-fill">
+                        </div>
+                        <div class="d-flex flex-column h-min gap-12 w-full">
+                            <h4 class="font-s-lg font-w-bold color-black dark:color-white">Intuitive and Easy to Use</h4>
+                            <p>Designed for simplicity, Velocity CSS features logical class names and comprehensive documentation. Get started quickly, regardless of your experience level, with easy-to-understand examples and guides.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex w-hf justify-content-center align-items-center sm:w-full">
+                        <img src="assets/svgs/customization.svg" class="h-40">
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-start justify-content-start gap-20 w-full sm:flex-column py-16 my-16">
+                    <div class="d-flex flex-column w-hf sm:flex-column sm:w-full">
+                        <div class="d-flex w-full mb-16">
+                            <img src="assets/images/built-in.png" class="w-28 h-28 object-fit-fill">
+                        </div>
+                        <div class="d-flex flex-column h-min gap-12 w-full">
+                            <h4 class="font-s-lg font-w-bold color-black dark:color-white">Built-In Themes</h4>
+                            <p>Apply consistent styles quickly with Velocity CSS's built-in themes. Customize these themes to match your brand or create your own for a tailored design solution.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex w-hf justify-content-center align-items-center sm:w-full">
+                        <img src="assets/svgs/built-in.svg" class="h-40">
+                    </div>
+                </div>
+
+                <div class="d-flex flex-row-reverse align-items-start justify-content-start gap-20 w-full sm:flex-column py-16 mt-16">
+                    <div class="d-flex flex-column w-hf sm:flex-column sm:w-full">
+                        <div class="d-flex w-full mb-16">
+                            <img src="assets/images/extensive.png" class="w-28 h-28 object-fit-fill">
+                        </div>
+                        <div class="d-flex flex-column h-min gap-12 w-full">
+                            <h4 class="font-s-lg font-w-bold color-black dark:color-white">Extensive Documentation</h4>
+                            <p>Velocity CSS offers detailed documentation with guides, examples, and best practices. Whether you're a beginner or experienced developer, find answers and solutions quickly for effective use of the framework.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex w-hf justify-content-center align-items-center sm:w-full">
+                        <img src="assets/svgs/documentation.svg" class="h-40">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="d-flex flex-column w-full align-items-center justify-content-center px-68 py-20 lg:px-16 md:px-16 sm:px-16 sm:flex-column my-28 gap-20">
+            <div class="d-flex flex-column w-full align-items-center center-text mb-24 gap-8">
+                <h4 class="font-s-xxl font-w-bold text-black dark:text-white">Examples</h4>
+                <p>Built with Velocity CSS</p>
+            </div>
+            <div class="d-grid grtpcols-3 sm:grtpcols-1 flex-column w-full gap-20 pl-8 sm:pl-0">
+                <div class="d-flex flex-column align-items-start justify-content-start w-full sm:flex-column sm:flex-row-reverse p-16 mb-8 bg-white dark:bg-slate-700 border-round-sxl sm:p-12 box-shadow-lg">
+                    <div class="d-flex w-full mb-16 overflow-hidden border-round-lg">
+                        <img src="assets/images/adetayo-portfolio.png" class="w-full object-fit-fill hover:scale-105 transition-duration-300 transition-ease-in-out transition-property-all">
+                    </div>
+                    <div class="d-flex flex-column h-min gap-4 w-full">
+                        <h4 class="font-s-md font-w-bold color-black dark:color-white">Adetayo Adeniyi</h4>
+                        <p>Portfolio Website</p>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column align-items-start justify-content-start w-full sm:flex-column sm:flex-row-reverse p-16 mb-8 bg-white dark:bg-slate-700 border-round-sxl sm:p-12 box-shadow-lg ">
+                    <div class="d-flex w-full mb-16 overflow-hidden border-round-lg">
+                        <img src="assets/images/landing-page.png" class="w-full object-fit-fill hover:scale-105 transition-duration-300 transition-ease-in-out transition-property-all">
+                    </div>
+                    <div class="d-flex flex-column h-min gap-4 w-full">
+                        <h4 class="font-s-md font-w-bold color-black dark:color-white">Velocity CSS</h4>
+                        <p>Landing Page</p>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column align-items-start justify-content-start w-full sm:flex-column sm:flex-row-reverse p-16 mb-8 bg-white dark:bg-slate-700 border-round-sxl sm:p-12 box-shadow-lg ">
+                    <div class="d-flex w-full mb-16 overflow-hidden border-round-lg">
+                        <img src="assets/images/hyper-highlight.png" class="w-full object-fit-fill hover:scale-105 transition-duration-300 transition-ease-in-out transition-property-all">
+                    </div>
+                    <div class="d-flex flex-column h-min gap-4 w-full">
+                        <h4 class="font-s-md font-w-bold color-black dark:color-white">Hyper Highlight</h4>
+                        <p>landing page</p>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex w-full align-items-center justify-content-center">
+                <a href="" class="w-fit border-none p-20 h-24 d-flex align-items-center justify-content-center bg-gradient-r from-blue-500 to-rose-500 color-white border-round-lg hover:bg-gradient-tr transition-duration-300 transition-ease-in-out transition-property-all no-decoration-text">View More</a>
+            </div>
+        </section>
+
+        <section class="d-flex flex-column w-full align-items-center justify-content-center px-68 py-20 lg:px-16 md:px-16 sm:px-0 sm:flex-column my-28 gap-20 mb-36">
+            <div class="d-flex flex-column w-full align-items-center center-text mb-24 gap-8">
+                <h4 class="font-s-xxl font-w-bold text-black dark:text-white">Modern CSS</h4>
+                <p>Velocity CSS also contains flex and grid</p>
+            </div>
+            <div class="d-flex w-full gap-20 sm:pl-0 gap-20 border-round-xl sm:flex-column">
+                <div class="d-flex flex-column align-items-start justify-content-start w-two-fifth sm:w-full sm:px-16">
+                    <div class="d-flex ">
+                        
+                    </div>
+                </div>
+
+                <div class="d-flex w-three-fifth gap-12 p-12 lg:w-hf md:w-hf sm:w-full sm:px-0">
+                    <pre class="language-html border-round-2lg bg-slate-800 w-full d-flex overflow-hidden border-solid border-w-2 border-slate-100 dark:border-slate-700 flex-column p-0 max-h-68 sm:max-h-56" tabindex="0">
+                        <div class="d-flex w-full align-items-center p-16 gap-12 border-solid border-wb-2 border-w-0 border-slate-100 dark:border-grey-700"><span class="w-12 h-12 border-round-full bg-red-500"></span><span class="w-12 h-12 border-round-full bg-yellow-500"></span><span class="w-12 h-12 border-round-full bg-green-500"></span></div>
+                        <code class="language-html p-32 sm:p-16 text-white overflow-auto horizontal-scrollbar" tabindex="0">&lt;div class="d-flex flex-column align-items-start justify-content-start sm:p-24 w-two-fifth sm:w-full"&gt;
+    &lt;div class="d-flex align-items-start justify-content-start p-20 sm:p-24 bg-white dark:bg-slate-700 box-shadow-xl gap-20 border-round-xl w-full"&gt;
+        &lt;div class="d-flex w-quarter h-28 border-round-xl overflow-hidden"&gt;
+            &lt;img src="assets/images/hyper-highlight.png" class="w-full h-full object-fit-cover"&gt;
+        &lt;/div&gt;
+        &lt;div class="d-flex flex-column h-min gap-12 w-three-quarter"&gt;
+            &lt;h4 class="font-s-lg font-w-bold color-black dark:color-white"&gt;Speed Up Development&lt;/h4&gt;
+            &lt;p&gt;Spend less time writing custom CSS and more time building features. With Velocity CSS, you can quickly prototype and iterate on your designs.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                    </pre>
+                </div>  
+            </div>
+        </section>
+
+        <section class="d-flex flex-column w-full align-items-center justify-content-center px-68 py-20 lg:px-16 md:px-16 sm:px-0 sm:flex-column my-28 gap-20 mb-36">
+            <div class="d-flex flex-column w-full align-items-center center-text mb-24 gap-8">
+                <h4 class="font-s-xxl font-w-bold text-black dark:text-white">Colors and Background</h4>
+                <p>Velocity CSS comes with a pre-shipped dark mode</p>
+            </div>
+            <div class="d-flex w-full gap-20 sm:pl-0 gap-20 border-round-xl sm:flex-column">
+                <div class="d-flex align-items-start justify-content-start sm:p-16 bg-white color-slate-600 dark:bg-slate-700 dark:color-slate-100">
+                    <div class="d-flex p-16 flex-column box-shadow-xl gap-12 border-round-xl w-full sm:flex-column">
+                        <p class="font-w-semibold">Blue</p>
+                        <div class="d-flex w-full gap-12">
+                            <div class="d-flex flex-column gap-8 w-fit">
+                                <span class="d-flex p-16 w-fit bg-blue-50"></span>
+                                <p>50</p>
+                            </div>
+
+                            <div class="d-flex flex-column gap-8 w-fit">
+                                <span class="d-flex p-16 w-fit bg-blue-100"></span>
+                                <p>100</p>
+                            </div>
+
+                            <div class="d-flex flex-column gap-8 w-fit">
+                                <span class="d-flex p-16 w-fit bg-blue-200"></span>
+                                <p>200</p>
+                            </div>
+
+                            <div class="d-flex flex-column gap-8 w-fit">
+                                <span class="d-flex p-16 w-fit bg-blue-300"></span>
+                                <p>300</p>
+                            </div>
+
+                            <div class="d-flex flex-column gap-8 w-fit">
+                                <span class="d-flex p-16 w-fit bg-blue-400"></span>
+                                <p>400</p>
+                            </div>
+
+                            <div class="d-flex flex-column gap-8 w-fit">
+                                <span class="d-flex p-16 w-fit bg-blue-500"></span>
+                                <p>500</p>
+                            </div>
+
+                            <div class="d-flex flex-column gap-8 w-fit">
+                                <span class="d-flex p-16 w-fit bg-blue-600"></span>
+                                <p>600</p>
+                            </div>
+
+                            <div class="d-flex flex-column gap-8 w-fit">
+                                <span class="d-flex p-16 w-fit bg-blue-700"></span>
+                                <p>700</p>
+                            </div>
+
+                            <div class="d-flex flex-column gap-8 w-fit">
+                                <span class="d-flex p-16 w-fit bg-blue-800"></span>
+                                <p>800</p>
+                            </div>
+
+                            <div class="d-flex flex-column gap-8 w-fit">
+                                <span class="d-flex p-16 w-fit bg-blue-900"></span>
+                                <p>900</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex w-three-fifth gap-12 p-12 lg:w-hf md:w-hf sm:w-full sm:px-0">
+                    <pre class="language-html border-round-2lg bg-slate-800 w-full d-flex overflow-hidden border-solid border-w-2 border-slate-100 dark:border-slate-700 flex-column p-0 max-h-68 sm:max-h-56" tabindex="0">
+                        <div class="d-flex w-full align-items-center p-16 gap-12 border-solid border-wb-2 border-w-0 border-slate-100 dark:border-grey-700"><span class="w-12 h-12 border-round-full bg-red-500"></span><span class="w-12 h-12 border-round-full bg-yellow-500"></span><span class="w-12 h-12 border-round-full bg-green-500"></span></div>
+                        <code class="language-html p-32 sm:p-16 text-white overflow-auto horizontal-scrollbar" tabindex="0">&lt;div class="d-flex flex-column align-items-start justify-content-start sm:p-24 w-two-fifth sm:w-full"&gt;
+    &lt;div class="d-flex align-items-start justify-content-start p-20 sm:p-24 bg-white dark:bg-slate-700 box-shadow-xl gap-20 border-round-xl w-full"&gt;
+        &lt;div class="d-flex w-quarter h-28 border-round-xl overflow-hidden"&gt;
+            &lt;img src="assets/images/hyper-highlight.png" class="w-full h-full object-fit-cover"&gt;
+        &lt;/div&gt;
+        &lt;div class="d-flex flex-column h-min gap-12 w-three-quarter"&gt;
+            &lt;h4 class="font-s-lg font-w-bold color-black dark:color-white"&gt;Speed Up Development&lt;/h4&gt;
+            &lt;p&gt;Spend less time writing custom CSS and more time building features. With Velocity CSS, you can quickly prototype and iterate on your designs.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                    </pre>
+                </div>  
+            </div>
+        </section>
+
+        <section class="d-flex flex-column w-full align-items-center justify-content-center px-68 py-20 lg:px-16 md:px-16 sm:px-0 sm:flex-column my-28 gap-20 mb-36">
+            <div class="d-flex flex-column w-full align-items-center center-text mb-24 gap-8">
+                <h4 class="font-s-xxl font-w-bold text-black dark:text-white">Responsiveness</h4>
+                <p>Velocity CSS comes with a pre-shipped dark mode</p>
+            </div>
+            <div class="d-flex w-full gap-20 sm:pl-0 gap-20 border-round-xl sm:flex-column">
+                <div class="d-flex flex-column align-items-start justify-content-start w-two-fifth sm:w-full sm:px-16">
+                    <div class="d-flex align-items-start justify-content-start p-20 sm:p-16 bg-white color-slate-600 dark:bg-slate-700 dark:color-slate-100 box-shadow-xl gap-20 border-round-xl w-full sm:flex-column dark-item">
+                        <div class="d-flex flex-column w-full p-12 gap-12">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex w-three-fifth gap-12 p-12 lg:w-hf md:w-hf sm:w-full sm:px-0">
+                    <pre class="language-html border-round-2lg bg-slate-800 w-full d-flex overflow-hidden border-solid border-w-2 border-slate-100 dark:border-slate-700 flex-column p-0 max-h-68 sm:max-h-56" tabindex="0">
+                        <div class="d-flex w-full align-items-center p-16 gap-12 border-solid border-wb-2 border-w-0 border-slate-100 dark:border-grey-700"><span class="w-12 h-12 border-round-full bg-red-500"></span><span class="w-12 h-12 border-round-full bg-yellow-500"></span><span class="w-12 h-12 border-round-full bg-green-500"></span></div>
+                        <code class="language-html p-32 sm:p-16 text-white overflow-auto horizontal-scrollbar" tabindex="0">&lt;div class="d-flex flex-column align-items-start justify-content-start sm:p-24 w-two-fifth sm:w-full"&gt;
+    &lt;div class="d-flex align-items-start justify-content-start p-20 sm:p-24 bg-white dark:bg-slate-700 box-shadow-xl gap-20 border-round-xl w-full"&gt;
+        &lt;div class="d-flex w-quarter h-28 border-round-xl overflow-hidden"&gt;
+            &lt;img src="assets/images/hyper-highlight.png" class="w-full h-full object-fit-cover"&gt;
+        &lt;/div&gt;
+        &lt;div class="d-flex flex-column h-min gap-12 w-three-quarter"&gt;
+            &lt;h4 class="font-s-lg font-w-bold color-black dark:color-white"&gt;Speed Up Development&lt;/h4&gt;
+            &lt;p&gt;Spend less time writing custom CSS and more time building features. With Velocity CSS, you can quickly prototype and iterate on your designs.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                    </pre>
+                </div>  
+            </div>
+        </section>
+
+        <section class="d-flex flex-column w-full align-items-center justify-content-center px-68 py-20 lg:px-16 md:px-16 sm:px-0 sm:flex-column my-28 gap-20 mb-36">
+            <div class="d-flex flex-column w-full align-items-center center-text mb-24 gap-8">
+                <h4 class="font-s-xxl font-w-bold text-black dark:text-white">Dark Mode</h4>
+                <p>Velocity CSS comes with a pre-shipped dark mode</p>
+            </div>
+            <div class="d-flex w-full gap-20 sm:pl-0 gap-20 border-round-xl sm:flex-column">
+                <div class="d-flex flex-column align-items-start justify-content-start w-two-fifth sm:w-full sm:px-16">
+                    <div class="d-flex w-full py-12">
+                        <span class="d-flex bg-blue-200 p-4 border-round-pill gap-8 mb-16">
+                            <span class="d-flex p-8 border-round-full bg-white color-blue-500 light-mode-toggle">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" width="20" height="20"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></svg>
+                            </span>
+                            <span class="d-flex p-8 border-round-full color-blue-800 dark-mode-toggle">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" fill="currentColor" width="20" height="20"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></svg>
+                            </span>
+                        </span>
+                    </div>
+
+                    <div class="dark-mode-presentation d-flex">
+                        <div class="d-flex align-items-start justify-content-start bg-white color-slate-600 dark:bg-slate-700 dark:color-slate-100 box-shadow-xl gap-20 border-round-xl w-full sm:flex-column dark-item overflow-hidden">
+                            <div class="d-flex w-third h-full border-round-xl border-round-tr-none border-round-br-none sm:border-round-bl-none sm:border-round-br-none overflow-hidden sm:w-full sm:h-32">
+                                <img src="assets/images/hyper-highlight.png" class="w-full h-full object-fit-cover">
+                            </div>
+                            <div class="d-flex flex-column h-min gap-12 w-two-third p-20 sm:w-full">
+                                <h4 class="font-s-lg font-w-bold color-black dark:color-white dark-text">Speed Up Development</h4>
+                                <p>Spend less time writing custom CSS and more time building features. With Velocity CSS, you can quickly prototype and iterate on your designs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex w-three-fifth gap-12 p-12 lg:w-hf md:w-hf sm:w-full sm:px-0">
+                    <pre class="language-html border-round-2lg bg-slate-800 w-full d-flex overflow-hidden border-solid border-w-2 border-slate-100 dark:border-slate-700 flex-column p-0 max-h-68 sm:max-h-56" tabindex="0">
+                        <div class="d-flex w-full align-items-center p-16 gap-12 border-solid border-wb-2 border-w-0 border-slate-100 dark:border-grey-700"><span class="w-12 h-12 border-round-full bg-red-500"></span><span class="w-12 h-12 border-round-full bg-yellow-500"></span><span class="w-12 h-12 border-round-full bg-green-500"></span></div>
+                        <code class="language-html p-32 sm:p-16 text-white overflow-auto horizontal-scrollbar" tabindex="0">&lt;div class="d-flex flex-column align-items-start justify-content-start sm:p-24 w-two-fifth sm:w-full"&gt;
+    &lt;div class="d-flex align-items-start justify-content-start p-20 sm:p-24 bg-white dark:bg-slate-700 box-shadow-xl gap-20 border-round-xl w-full"&gt;
+        &lt;div class="d-flex w-quarter h-28 border-round-xl overflow-hidden"&gt;
+            &lt;img src="assets/images/hyper-highlight.png" class="w-full h-full object-fit-cover"&gt;
+        &lt;/div&gt;
+        &lt;div class="d-flex flex-column h-min gap-12 w-three-quarter"&gt;
+            &lt;h4 class="font-s-lg font-w-bold color-black dark:color-white"&gt;Speed Up Development&lt;/h4&gt;
+            &lt;p&gt;Spend less time writing custom CSS and more time building features. With Velocity CSS, you can quickly prototype and iterate on your designs.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+                    </pre>
+                </div>  
+            </div>
+        </section>
+
+        <section class="d-flex flex-column w-full align-items-center justify-content-center px-68 py-20 lg:px-16 md:px-16 sm:px-16 sm:flex-column my-28 gap-20">
+            <div class="d-flex flex-column w-full gap-20 pl-8 sm:pl-0">
+                <div class="d-flex align-items-start justify-content-start gap-20 w-full sm:flex-column sm:flex-row-reverse py-16 mb-16">
+                    <div class="d-flex flex-column w-hf sm:flex-column sm:w-full">
+                        <div class="d-flex w-full mb-16">
+                            <h4 class="font-s-xxl font-w-bold text-black dark:text-white">Become a Sponsor</h4>
+                            <p>Sponsor Velocity CSS by making donations</p>
+                        </div>
+                        <div class="d-flex flex-column h-min gap-12 w-full">
+                            <a href="https://www.buymeacoffee.com/velocitycss" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px!important; width: 217px!important;"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer w-100 bottom d-flex col f-wrap cen-hor cen-ver padding-top-sm">
+            
+            <div class="d-flex px-68 flex-column w-full pt-20 pb-60 sm:px-16">
+
+                <div class="d-flex w-full justify-content-between flex-wrap sm:flex-column">
+
+                    <div class="d-flex w-quarter flex-column sm:border-wb-1 sm:border-grey-100 sm:border-solid sm:w-full sm:border-w-0 sm:py-12">
+                        <span class="font-w-medium color-black dark:color-white mb-8">Quick links</span>
+                        <ul class="d-flex flex-wrap flex-column w-full gap-8">
+                            <li><a href="" class="py-8 no-decoration-text h-min w-min hover:text-blue-500">Home</a></li>
+                            <li><a href="" class="py-8 no-decoration-text h-min w-min hover:text-blue-500">About</a></li>
+                            <li><a href="" class="py-8 no-decoration-text h-min w-min hover:text-blue-500">Project</a></li>
+                            <li><a href="" class="py-8 no-decoration-text h-min w-min hover:text-blue-500">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="d-flex w-quarter flex-column sm:border-wb-1 sm:border-grey-100 sm:border-solid sm:w-full sm:border-w-0 sm:py-12">
+                        <span class="font-w-medium color-black dark:color-white mb-8">Projects</span>
+                        <ul class="d-flex flex-wrap flex-column w-full gap-8">
+                            <li><a href="" class="py-8 no-decoration-text h-min w-min hover:text-blue-500">Swiftaxify</a></li>
+                            <li><a href="" class="py-8 no-decoration-text h-min w-min hover:text-blue-500">Velocity CSS</a></li>
+                            <li><a href="" class="py-8 no-decoration-text h-min w-min hover:text-blue-500">Codewithace</a></li>
+                            <li><a href="" class="py-8 no-decoration-text h-min w-min hover:text-blue-500">My portfolio</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="d-flex w-quarter flex-column sm:border-wb-1 sm:border-grey-100 sm:border-solid sm:w-full sm:border-w-0 sm:py-12">
+                        <span class="font-w-medium color-black dark:color-white mb-8">Support</span>
+                        <ul class="d-flex flex-wrap flex-column w-full gap-8">
+                            <li><a href="" class="py-8 no-decoration-text h-min w-min hover:text-blue-500">paypal</a></li>
+                            <li><a href="" class="py-8 no-decoration-text h-min w-min hover:text-blue-500">Buy me a coffee</a></li>
+                            <li><a href="" class="py-8 no-decoration-text h-min w-min hover:text-blue-500">Patreon</a></li>
+                            <li><a href="" class="py-8 no-decoration-text h-min w-min hover:text-blue-500">Github donate</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="d-flex w-quarter flex-column sm:border-wb-1 sm:border-grey-100 sm:border-solid sm:w-full sm:border-w-0 sm:py-12">
+                        <span class="font-w-medium color-black dark:color-white mb-8">Follow me on</span>
+                        <ul class="d-flex flex-wrap flex-column w-full">
+                            <li><a href="https://twitter.com/webdevadetayo" class="py-4 no-decoration-text h-min w-min hover:text-blue-500 d-flex align-items-center gap-8">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.06,212.78l-63.42-99.66L212.44,44A6,6,0,1,0,203.56,36L143,102.62l-41.9-65.84A6,6,0,0,0,96,34H48a6,6,0,0,0-5.06,9.22l63.42,99.66L43.56,212A6,6,0,0,0,52.44,220L113,153.38l41.9,65.84A6,6,0,0,0,160,222h48a6,6,0,0,0,5.06-9.22ZM163.29,210,58.93,46H92.71L197.07,210Z"/></svg> Twitter
+                            </a></li>
+                            <li><a href="https://facebook.com/webdeveloperadetayo" class="py-4 no-decoration-text h-min w-min hover:text-blue-500 d-flex align-items-center gap-8">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"   fill="currentColor"><path d="M232,128a104.16,104.16,0,0,1-91.55,103.26,4,4,0,0,1-4.45-4V152h24a8,8,0,0,0,8-8.53,8.17,8.17,0,0,0-8.25-7.47H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,8-8.53A8.17,8.17,0,0,0,167.73,80H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0-8,8.53A8.17,8.17,0,0,0,96.27,152H120v75.28a4,4,0,0,1-4.44,4A104.15,104.15,0,0,1,24.07,124.09c2-54,45.74-97.9,99.78-100A104.12,104.12,0,0,1,232,128Z"/></svg> Facebook
+                            </a></li>
+                            <li><a href="https://instagram.com/adetayofreelancer" class="py-4 no-decoration-text h-min w-min hover:text-blue-500 d-flex align-items-center gap-8">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,82a46,46,0,1,0,46,46A46.06,46.06,0,0,0,128,82Zm0,80a34,34,0,1,1,34-34A34,34,0,0,1,128,162ZM176,26H80A54.06,54.06,0,0,0,26,80v96a54.06,54.06,0,0,0,54,54h96a54.06,54.06,0,0,0,54-54V80A54.06,54.06,0,0,0,176,26Zm42,150a42,42,0,0,1-42,42H80a42,42,0,0,1-42-42V80A42,42,0,0,1,80,38h96a42,42,0,0,1,42,42ZM190,76a10,10,0,1,1-10-10A10,10,0,0,1,190,76Z"/></svg> instagram
+                            </a></li>
+                            <li><a href="https://github.com/developeradetayo" class="py-4 no-decoration-text h-min w-min hover:text-blue-500 d-flex align-items-center gap-8">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,104v8a56.06,56.06,0,0,1-48.44,55.47A39.8,39.8,0,0,1,176,192v40a8,8,0,0,1-8,8H104a8,8,0,0,1-8-8V216H72a40,40,0,0,1-40-40A24,24,0,0,0,8,152a8,8,0,0,1,0-16,40,40,0,0,1,40,40,24,24,0,0,0,24,24H96v-8a39.8,39.8,0,0,1,8.44-24.53A56.06,56.06,0,0,1,56,112v-8a58.14,58.14,0,0,1,7.69-28.32A59.78,59.78,0,0,1,69.07,28,8,8,0,0,1,76,24a59.75,59.75,0,0,1,48,24h24a59.75,59.75,0,0,1,48-24,8,8,0,0,1,6.93,4,59.74,59.74,0,0,1,5.37,47.68A58,58,0,0,1,216,104Z"/></svg> Github
+                            </a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="d-flex w-full pt-32 flex-column gap-12">
+                    <div class="d-flex justify-content-start gap-8">
+                        <a href="https://linkedin.com/in/adetayo-adeniyi-809469295">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"           fill="currentColor"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24ZM96,176a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0ZM88,96a12,12,0,1,1,12-12A12,12,0,0,1,88,96Zm96,80a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140Z"/></svg>
+                        </a>
+                        <a href="https://github.com/developeradetayo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,104v8a56.06,56.06,0,0,1-48.44,55.47A39.8,39.8,0,0,1,176,192v40a8,8,0,0,1-8,8H104a8,8,0,0,1-8-8V216H72a40,40,0,0,1-40-40A24,24,0,0,0,8,152a8,8,0,0,1,0-16,40,40,0,0,1,40,40,24,24,0,0,0,24,24H96v-8a39.8,39.8,0,0,1,8.44-24.53A56.06,56.06,0,0,1,56,112v-8a58.14,58.14,0,0,1,7.69-28.32A59.78,59.78,0,0,1,69.07,28,8,8,0,0,1,76,24a59.75,59.75,0,0,1,48,24h24a59.75,59.75,0,0,1,48-24,8,8,0,0,1,6.93,4,59.74,59.74,0,0,1,5.37,47.68A58,58,0,0,1,216,104Z"/></svg>
+                        </a>
+                        <a href="https://youtube.com/webdevadetayo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-73.74,65-40,28A8,8,0,0,1,108,156V100a8,8,0,0,1,12.59-6.55l40,28a8,8,0,0,1,0,13.1Z"/></svg>
+                        </a>
+                        <a href="https://dribbble.com/webdevadetayo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm87.65,96.18Q211.83,120,208,120a168.58,168.58,0,0,0-43.94,5.84A166.52,166.52,0,0,0,150.61,96a168.32,168.32,0,0,0,38.2-31.55A87.78,87.78,0,0,1,215.65,120.18ZM176.28,54.46A151.75,151.75,0,0,1,142,82.52a169.22,169.22,0,0,0-38.63-39,88,88,0,0,1,73,10.94ZM85.65,50.88a153.13,153.13,0,0,1,42,39.18A151.82,151.82,0,0,1,64,104a154.19,154.19,0,0,1-20.28-1.35A88.39,88.39,0,0,1,85.65,50.88ZM40,128a87.73,87.73,0,0,1,.53-9.64A168.85,168.85,0,0,0,64,120a167.84,167.84,0,0,0,72.52-16.4,150.82,150.82,0,0,1,12.31,27.13,167.11,167.11,0,0,0-24.59,11.6,169.22,169.22,0,0,0-55.07,51.06A87.8,87.8,0,0,1,40,128Zm42,75a152.91,152.91,0,0,1,50.24-46.79,148.81,148.81,0,0,1,20.95-10,152.48,152.48,0,0,1,3.73,33.47,152.93,152.93,0,0,1-3.49,32.56A87.92,87.92,0,0,1,82,203Zm89.06,1.73a170,170,0,0,0,1.86-25,168.69,168.69,0,0,0-4.45-38.47A152.31,152.31,0,0,1,208,136q3.8,0,7.61.19A88.13,88.13,0,0,1,171.06,204.72Z"/></svg>
+                        </a>
+                    </div>
+
+                    <p>&copy; <?php echo date('Y'); ?> Adeniyi Adetayo. All rights reserved.</p>
+                </div>
+
+            </div>
+
+        </footer>
+
+    </main>
+</body>
+</html>
