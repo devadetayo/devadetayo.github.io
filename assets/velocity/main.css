@@ -1,0 +1,79 @@
+@font-face {
+	font-family: "calibre-normal";
+	src: url('../static/calibre/CalibreRegular.otf');
+}
+
+@font-face {
+	font-family: "calibre-thin";
+	src: url('../static/calibre/TestCalibre-Thin-BF661746edb928b.otf');
+}
+
+@font-face {
+	font-family: "calibre-medium";
+	src: url('../static/calibre/TestCalibre-Medium-BF661746ed8cff9.otf');
+}
+
+@font-face {
+	font-family: "calibre-semibold";
+	src: url('../static/calibre/TestCalibre-Semibold-BF661746ed9242e.otf');
+}
+
+@font-face {
+	font-family: "calibre-bold";
+	src: url('../static/calibre/TestCalibre-Bold-BF661746ed7c530.otf');
+}
+
+@font-face {
+	font-family: "calibre-extrabold";
+	src: url('../static/calibre/TestCalibre-Black-BF661746ec9d64f.otf');
+}
+
+@font-face {
+	font-family: "calibre-normal";
+	src: url('../static/calibre/TestCalibre-Regular-BF661746edbee52.otf');
+}
+
+@font-face {
+	font-family: "mono";
+	src: url('../static/RobotoMono-VariableFont_wght.ttf');
+}
+
+*{
+	font-family: 'calibre-normal', 'Trebuchet MS', sans-serif;
+}
+
+.font-mono{
+	font-family: 'mono', 'Courier New', Courier, monospace;
+}
+
+.nav-scrolling{
+	backdrop-filter: blur(12px);
+}
+
+::-webkit-scrollbar-thumb{
+	color: var(--velocity-indigo-500);
+}
+
+.font-w-thin{
+	font-family: 'calibre-thin', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.font-w-normal{
+	font-family: 'calibre-normal', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.font-w-medium{
+	font-family: 'calibre-medium', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.font-w-semibold{
+	font-family: 'calibre-semibold', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.font-w-bold{
+	font-family: 'calibre-bold', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.font-w-extrabold{
+	font-family: 'calibre-extrabold', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
