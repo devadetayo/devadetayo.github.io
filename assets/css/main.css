@@ -157,3 +157,19 @@ html[data-theme="dark"] {
 html, body {
   font-family: "Poppins", "Inter", sans-serif;
 }
+
+#mobile-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: left 0.3s ease-in-out;
+}
+
+/* When open, slide into view */
+#mobile-menu.open {
+  left: 0;
+}
+
+nav a.active{
+  border-bottom: 2px solid var(--quanta-primary);
+}
