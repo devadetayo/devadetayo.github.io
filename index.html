@@ -106,7 +106,13 @@ section{padding:4.5rem 0;border-top:1px solid var(--line)}
 .work{display:grid;gap:1.5rem}
 @media(min-width:48rem){.work{grid-template-columns:1fr 1fr}.work .lead{grid-column:1/-1;display:grid;grid-template-columns:1.35fr 1fr}.work .lead .shot{aspect-ratio:auto;min-height:20rem}}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s}
-.card:hover{border-color:var(--accent)}
+.card{position:relative}
+.card:hover,.card:focus-within{border-color:var(--accent)}
+.card h3 a::after{content:"";position:absolute;inset:0;z-index:2}
+.card h3 a:focus-visible{outline:none}
+.card:focus-within{outline:2px solid var(--accent);outline-offset:3px}
+.card h3 a .arr{display:inline-block;margin-left:.35rem;color:var(--accent);transition:transform .25s}
+.card:hover h3 a .arr{transform:translate(2px,-2px)}
 .shot{aspect-ratio:16/10;background:color-mix(in srgb,var(--ink) 5%,var(--surface));padding:1rem;display:grid;place-items:center}
 .shot img{width:100%;height:100%;object-fit:contain}
 .body{padding:1.5rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
@@ -327,7 +333,7 @@ html,body{overflow-x:clip}
           <div class="shot"><img src="https://devadetayo.github.io/devadetayo/assets/images/mock-2.png" alt="BRiGMi Realestate app and web screens" loading="lazy" onerror="this.hidden=true"></div>
           <div class="body">
             <p class="kind">Real estate platform</p>
-            <h3>BRiGMi Realestate</h3>
+            <h3><a href="https://realestate-app.page.gd" target="_blank" rel="noopener noreferrer">BRiGMi Realestate<span class="arr" aria-hidden="true">↗</span></a></h3>
             <p>A React Native mobile app and a PHP web app for property listings in Nigeria, built from the API and database through to the screens, sharing one design language.</p>
             <div class="chips"><span class="chip">React Native</span><span class="chip">Expo</span><span class="chip">PHP</span><span class="chip">AtomAttr</span></div>
           </div>
@@ -336,7 +342,7 @@ html,body{overflow-x:clip}
         <article data-r class="card">
           <div class="shot"><img src="https://devadetayo.github.io/devadetayo/assets/images/mock-3.png" alt="Nexatar website and app screens" loading="lazy" onerror="this.hidden=true"></div>
           <div class="body">
-            <p class="kind">Website and app</p>
+            <p class="kind">Website and app · In progress</p>
             <h3>Nexatar</h3>
             <p>A website and app with a clean UI and one consistent design system across web and mobile.</p>
             <div class="chips"><span class="chip">React Native</span><span class="chip">PHP</span><span class="chip">AtomAttr</span></div>
@@ -347,7 +353,7 @@ html,body{overflow-x:clip}
           <div class="shot"><img src="https://devadetayo.github.io/devadetayo/assets/images/zibraplanet.png" alt="Zibra Planet Ltd. website" loading="lazy" onerror="this.hidden=true"></div>
           <div class="body">
             <p class="kind">Business website</p>
-            <h3>Zibra Planet Ltd.</h3>
+            <h3><a href="https://devadetayo.github.io/zibraplanetengineering" target="_blank" rel="noopener noreferrer">Zibra Planet Ltd.<span class="arr" aria-hidden="true">↗</span></a></h3>
             <p>A company website that presents the brand clearly, with a clean layout and straightforward navigation.</p>
             <div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div>
           </div>
@@ -357,7 +363,7 @@ html,body{overflow-x:clip}
           <div class="shot"><img src="https://devadetayo.github.io/devadetayo/assets/images/ayaahub.png" alt="Ayaahub website" loading="lazy" onerror="this.hidden=true"></div>
           <div class="body">
             <p class="kind">Website</p>
-            <h3>Ayaahub</h3>
+            <h3><a href="https://ayaahub.com" target="_blank" rel="noopener noreferrer">Ayaahub<span class="arr" aria-hidden="true">↗</span></a></h3>
             <p>A focused layout that keeps the core experience easy to navigate.</p>
             <div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div>
           </div>
@@ -367,7 +373,7 @@ html,body{overflow-x:clip}
           <div class="shot"><svg viewBox="0 0 160 100" width="62%" aria-hidden="true" style="color:var(--accent)"><rect x="14" y="14" width="64" height="72" rx="4" fill="var(--surface)" stroke="currentColor" stroke-width="2"/><rect x="82" y="14" width="64" height="72" rx="4" fill="var(--surface)" stroke="currentColor" stroke-width="2"/><path d="M26 34h40M26 46h40M26 58h28M94 34h40M94 46h40M94 58h28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity=".5"/><path d="M80 8v84" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/></svg></div>
           <div class="body">
             <p class="kind">Browser tool</p>
-            <h3>Foldwise</h3>
+            <h3><a href="https://devadetayo.github.io/foldwise" target="_blank" rel="noopener noreferrer">Foldwise<span class="arr" aria-hidden="true">↗</span></a></h3>
             <p>A browser-based PDF booklet imposition tool with print-format workflows, so documents fold and print in the right page order.</p>
             <div class="chips"><span class="chip">JavaScript</span><span class="chip">PDF</span><span class="chip">HTML</span></div>
           </div>
@@ -385,12 +391,12 @@ html,body{overflow-x:clip}
           </div>
         </div>
         <div data-r class="row">
-          <div><h4>AtomAttr UI and Playground</h4><p>A component showcase and interactive playground for exploring AtomAttr patterns and previewing the code.</p></div>
-          <div class="links"><a href="https://devadetayo.github.io/atomattr/ui.html" target="_blank" rel="noopener noreferrer">Open</a></div>
+          <div><h4>AtomAttr Icons</h4><p>An icon set built to work with AtomAttr, so icons can be dropped into a page and styled through attributes.</p></div>
+          <div class="links"><a href="https://devadetayo.github.io/atomattr-icons" target="_blank" rel="noopener noreferrer">Website</a></div>
         </div>
         <div data-r class="row">
           <div><h4>AtomAttr Studio</h4><p>A visual website design environment with canvas editing, responsive previews, reusable templates and code export.</p></div>
-          <span class="tag">In progress</span>
+          <div class="links"><span class="tag">In progress</span><a href="https://devadetayo.github.io/atomattr-studio" target="_blank" rel="noopener noreferrer">Website</a></div>
         </div>
       </div>
     </div>
